@@ -15,7 +15,7 @@ class ImagePublisher : public rclcpp::Node
 {
 public:
     ImagePublisher()
-        : Node("image_publisher")   
+        : Node("image_publisher_node")   
     {
         std::string left_prefix = "left";
         std::string right_prefix = "right";

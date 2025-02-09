@@ -156,12 +156,12 @@ namespace stereo_odometry
             RCLCPP_DEBUG(this->get_logger(), "Images republished");
 
             odom_.computeOdometry(frame);
-            // outfile.open("/root/poses.txt", std::ios::app);
-            // if (outfile.is_open())
-            // {
-            //     outfile << frame.pose.at<double>(0, 3) << " " << frame.pose.at<double>(2, 3) << "\n";
-            // }
-            // outfile.close();
+            outfile.open("/root/poses.txt", std::ios::app);
+            if (outfile.is_open())
+            {
+                outfile << frame.pose.at<double>(0, 3) << " " << frame.pose.at<double>(2, 3) << "\n";
+            }
+            outfile.close();
             std::vector<double> r;
             cv::Rodrigues(frame.pose(cv::Range(0, 3), cv::Range(0, 3)), r);
             tf2::Quaternion q;

@@ -1,4 +1,4 @@
-image_publisher:
+image_publisher_node:
   ros__parameters:
     root: /E/KITTI/2011_09_26_0009
     left_path: image_00/data

@@ -43,6 +43,7 @@ ament_target_dependencies(image_publisher_node rclcpp
 
 install(TARGETS 
   stereo_odometry_node
+  image_publisher_node
   DESTINATION lib/${PROJECT_NAME})
 
 install(DIRECTORY

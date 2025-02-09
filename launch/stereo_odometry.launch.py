@@ -6,7 +6,7 @@ import os
 def generate_launch_description():
 
     odom_config_file = os.path.join(
-        get_package_share_directory('stereo_odometry'),  
+        get_package_share_directory('stereo_odometry_ros'),  
         'config',
         'stereo_odometry_params.yaml'
     )
@@ -15,7 +15,7 @@ def generate_launch_description():
     
     nodes = [
         Node(
-            package='stereo_odometry',           
+            package='stereo_odometry_ros',           
             executable='stereo_odometry_node',      
             namespace=ns,
             name=f'stereo_odometry_node',
