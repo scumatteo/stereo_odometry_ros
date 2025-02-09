@@ -1,0 +1,16 @@
+image_publisher:
+  ros__parameters:
+    root: /E/KITTI/2011_09_26_0009
+    left_path: image_00/data
+    right_path: image_01/data
+    fps: 30
+
+    left:
+      queue_size: 10
+      topic: "/left/image_raw"
+      frame_id: "left_frame"
+      
+    right:
+      queue_size: 10
+      topic: "/right/image_raw"
+      frame_id: "right_frame"

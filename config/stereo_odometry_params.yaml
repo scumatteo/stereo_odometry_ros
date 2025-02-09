@@ -1,0 +1,44 @@
+stereo_odometry1:
+  stereo_odometry_node:
+    ros__parameters:
+      queue_size: 10
+      left:
+        topic: "/left/image_raw"
+        height: 512
+        width: 1392
+        distortion_model: ""
+        D: [-3.728755e-01, 2.037299e-01, 2.219027e-03, 1.383707e-03, -7.233722e-02]
+        K: [9.842439e+02, 0.0, 6.900000e+02, 0.0, 9.808141e+02, 2.331966e+02, 0.0, 0.0, 1.0]
+        R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+        P: [9.842439e+02, 0.0, 6.900000e+02, 0.0, 0.0, 9.808141e+02, 2.331966e+02, 0.0, 0.0, 0.0, 1.0, 0.0]
+        binning_x: 0
+        binning_y: 0
+        roi:
+          x_offset: 0
+          y_offset: 0
+          height: 0
+          width: 0
+          do_rectify: False
+        
+      right:
+        queue_size: 10
+        topic: "/right/image_raw"
+        height: 512
+        width: 1392
+        distortion_model: ""
+        D: [-3.644661e-01, 1.790019e-01, 1.148107e-03, -6.298563e-04, -5.314062e-02]
+        K: [9.895267e+02, 0.0, 7.020000e+02, 0.0, 9.878386e+02, 2.455590e+02, 0.0, 0.0, 1.0]
+        R: [1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0]
+        P: [9.895267e+02, 0.0, 7.020000e+02, 0.0, 0.0, 9.878386e+02, 2.455590e+02, 0.0, 0.0, 0.0, 1.0, 0.0]
+        binning_x: 0
+        binning_y: 0
+        roi:
+          x_offset: 0
+          y_offset: 0
+          height: 0
+          width: 0
+          do_rectify: False
+
+      # tf right
+      # [x, y, z, yaw, pitch, roll] in rads
+      tf: [-5.370000e-01, 4.822061e-03, -1.252488e-02, 0.00871216, -0.03076026, -0.01874693]
